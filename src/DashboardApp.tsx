@@ -18,7 +18,7 @@ const Transition = forwardRef(function Transition(
 
 const Dashboard = ({ onClose, open }: {open: boolean; onClose: () => void }) =>{ 
     return (
-      <Dialog onClose={onClose} open={open} fullScreen TransitionComponent={Transition}>
+      <Dialog onClose={onClose} open={open} fullScreen TransitionComponent={Transition}sx={{ zIndex: 10000 }}>
         <IconButton onClick={onClose} sx={{ position: 'absolute', right: '1rem', top: '1rem' }}>
             <CloseIcon sx={{ fontSize: 22 }} />
         </IconButton>
